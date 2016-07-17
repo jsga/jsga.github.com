@@ -1,0 +1,12 @@
+{ 
+  "heading" : {
+  	"en" : "Hi, I'm Javier Saez,"},
+
+  "lead" : { 
+  	"en" : "a passionate data scientist." },
+
+  "about" : {
+  	"en" : "I would describe myself as a very motivated person, towards both my job and my life as a whole. I am very passionate about transforming numbers into knowledge and using them for optimal decisions, while always thinking out of the box. I am always willing to do things, do them in the right way and, when possible, staying creative thinking out of the box. On a personal level, I consider myself to be a very positive person, with an easy smile and full of energy." },
+
+  "picture" : "Javi.JPG"
+}

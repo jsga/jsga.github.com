@@ -1,0 +1,73 @@
+{ 
+  "heading" : {
+    "en" : "Contact"},
+
+  // "vcard" : {
+  //   "file" : "/vcard.vcf",
+  //   "qr_svg" : "vcard-qr.svg",
+  //   "qr_fallback" : "vcard-qr.png" },
+
+  // "vcard_label" : {
+  //   "label" : {
+  //     "en" : "vCard",
+  //     "de" : "vCard" },
+  //   "download_file" : {
+  //     "en" : "Download file",
+  //     "de" : "Datei herunterladen" },
+  //   "scan_qr_code" : {
+  //     "en" : "or scan QR code:",
+  //     "de" : "oder QR-Code scannen:" }},
+
+  "email" : "javiersaezgallego@gmail.com", 
+
+  "email_label" : {
+    "en" : "E-Mail"},
+
+  // "alternative_emails" : [ 
+  // 	"daniel.limberger@hpi.de", 
+  // 	"limberger@cginternals.com" ],
+
+  // "alternative_label" : {
+  //   "en" : "Other",
+  //   "de" : "Alternativ" },
+
+  // "phone" : { 
+  //   "en" : "+49 163 568 2818",
+  //   "de" : "0163 568 2818" },
+
+  // "phone_label" : {
+  //   "en" : "Phone",
+  //   "de" : "Telefon" },
+
+  "refs" : [ 
+  	{ "name" : "LinkedIn", "href" : "https://dk.linkedin.com/in/javier-sáez-gallego-7bb23823" },
+  	{ "name" : "GitHub", "href" : "https://github.com/jsga" },
+  	],
+
+  // "refs_label" : {
+  //   "en" : "More",
+  //   "de" : "Weitere" },
+
+  // "formspree" : "cgdaniel@outlook.com",
+
+  // "form_legend" : {
+  //   "en" : "Drop Me a Line",
+  //   "de" : "Sende mir eine Nachricht" },
+
+  // "name_label" : {
+  //   "en" : "Name",
+  //   "de" : "Name" },
+
+  // "message_label" : {
+  //   "en" : "Message",
+  //   "de" : "Nachricht" },
+
+  // "submit_button" : {
+  //   "en" : "Submit",
+  //   "de" : "Absenden" },
+
+  //  "submit_info" : {
+  //  	"en" : "To cgdaniel@outlook.com via <a href='https://formspree.io/'>Formspree</a>.",
+  //  	"de" : "Via <a href='https://formspree.io/'>Formspree</a> an cgdaniel@outlook.com." },
+
+}
