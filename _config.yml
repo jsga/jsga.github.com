@@ -1,0 +1,49 @@
+# Site settings
+timezone: Europe/Copenhagen
+
+baseurl: '' # the subpath of your site, e.g. /blog/
+url: 'http://localhost:4000/' # the base hostname & protocol for your site
+
+title: 'Javier Saez Gallego'
+author: 'Javier Saez Gallego'
+
+languages: [ 'en' ]
+
+google_font_sans_serif:  'Amiko'
+
+flickr_user: '144029339@N02'
+flickr_api_key: c4ec3f843c783b1dff9cc477cdc20687
+
+default_header_img_dimensions: 'width="1024" height="1024"'
+default_thubmnail_img_dimensions: 'width="768" height="768"'
+
+# Handling Reading
+safe: true
+encoding: utf-8
+
+# Build settings
+markdown: kramdown
+
+# Outputting
+exclude: [
+  'cibuild',
+  'Gemfile',
+  'Gemfile.lock',
+  'package.json',
+  'README.md',
+  'vendor']
+
+defaults:
+  - scope:
+      path: ''
+    values:
+      lang: en
+      description: 'Personal website of Javier Saez Gallego.'
+  - scope:
+      path: 'en'
+    values:
+      lang: en
+
+# CSS Minification
+sass:
+  style: compressed

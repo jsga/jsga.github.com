@@ -1,0 +1,21 @@
+{ 
+  "heading" : {
+    "en" : "Talks"},
+
+  "talks" : [
+
+    { "date"      : "2014-04-01",
+      "title"     : "Optimal Spinning Reserve by taking advantage of probabilistic forecasting",
+      "location"  : "Danish Wind Industry Annual Event, Denmark"
+    },
+    { "date"      : "2013-11-20 00:00:00",
+      "title"     : "Determining reserve requirements in DK1 area of Nord Pool using a probabilistic approach",
+      "location"  : "International Conference on Computationa Management Science, Lisbon, Portugal" 
+    },
+        { "date"      : "2015-07-12 00:00:00",
+      "title"     : "A data-driven bidding model for a cluster of price-responsive consumers of electricity",
+      "location"  : "EURO Glasgow. 27th European Conference on Operational Research & INFORMS Annual Meeting in Philadelphia" 
+    },
+
+  ]
+}

@@ -1,8 +1,7 @@
+The source files have been taken from [https://travis-ci.org/cgcostume/cgcostume.github.io](https://travis-ci.org/cgcostume/cgcostume.github.io). and modified according to my needs.
 
 Portfolio optimized for researchers and those who strive for a minimal, file-based "content management" (**Datafolio**).
 The complete site's content is based on a json/xml file per section (e.g., ```contact.json```, ```projects.json```, ```publications.json```, ```talks.json```, and ```teaching.json```) as well as the pages ```_config.yml``` information. 
-
-[![Build Status](https://travis-ci.org/cgcostume/cgcostume.github.io.svg?branch=master)](https://travis-ci.org/cgcostume/cgcostume.github.io)
 
 #### Examples
 
@@ -32,35 +31,10 @@ The complete site's content is based on a json/xml file per section (e.g., ```co
 
 Datafolio uses [Jekyll](http://jekyllrb.com/), [Bootstrap 4](http://v4-alpha.getbootstrap.com/), [Blueimp Gallery](https://github.com/blueimp/Bootstrap-Image-Gallery), can access the [Flickr API](https://www.flickr.com/services/api/) and relies on [jsDelivr](https://www.jsdelivr.com/), [Google Fonts](https://www.google.com/fonts), and [Formspree](http://formspree.io/).
 
-#### Setting up the Build Environment (on Windows)
-
-For the development and testing of the website jekyll (https://jekyllrb.com/) is required. A fast and simple setup of jekyll, is possible via chocolatey (https://chocolatey.org/) either using the ```setup.bat``` script or proceed as follows (for non-Windows platforms the specific package managers, e.g., apt-get, can be used instead of Chocolatey):
-
-* For installing chocolatey open a command prompt as administrator and run the following command:
-```
-@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
-```
-* Now close the command prompt and open a new one (not necessarily with administrative priviliges) to install jekyll (which requires ruby) by running:
-```
-choco install ruby -y
-gem install jekyll
-```
-
-For deployment of the website, the following optimizations (mostly minimizations) that require node, npm as well as uncss, cssmin, and svgo should be considered.
-
-* Open a command prompt and run;
-```
-choco install nodejs -y
-npm install
-npm update
-```
-This should already install all required packages listed in ```package.json```.
-* However, if a package was not found (e.g., svgo), try manually installing it by running:
-```
-npm install -g svgo
-```
 
 #### Building the Website (any platform)
+
+* Install [jekyll](https://jekyllrb.com/docs/quickstart/) and follow the given instructions
 
 * Auto rebuilding (on any change) and watching the website (stored in '_site') can be done by running (requires only jekyll)
 ```

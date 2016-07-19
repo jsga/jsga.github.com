@@ -1,6 +1,6 @@
 { 
   "heading" : {
-    "en" : "Contact"},
+    "en" : "Contact" },
 
   // "vcard" : {
   //   "file" : "/vcard.vcf",
@@ -9,27 +9,23 @@
 
   // "vcard_label" : {
   //   "label" : {
-  //     "en" : "vCard",
-  //     "de" : "vCard" },
+  //     "en" : "vCard"},
   //   "download_file" : {
-  //     "en" : "Download file",
-  //     "de" : "Datei herunterladen" },
+  //     "en" : "Download file"},
   //   "scan_qr_code" : {
-  //     "en" : "or scan QR code:",
-  //     "de" : "oder QR-Code scannen:" }},
+  //     "en" : "or scan QR code:" }},
 
   "email" : "javiersaezgallego@gmail.com", 
 
   "email_label" : {
-    "en" : "E-Mail"},
+    "en" : "E-Mail" },
 
   // "alternative_emails" : [ 
   // 	"daniel.limberger@hpi.de", 
   // 	"limberger@cginternals.com" ],
 
   // "alternative_label" : {
-  //   "en" : "Other",
-  //   "de" : "Alternativ" },
+  //   "en" : "Other" },
 
   // "phone" : { 
   //   "en" : "+49 163 568 2818",
@@ -42,11 +38,11 @@
   "refs" : [ 
   	{ "name" : "LinkedIn", "href" : "https://dk.linkedin.com/in/javier-sáez-gallego-7bb23823" },
   	{ "name" : "GitHub", "href" : "https://github.com/jsga" },
+    { "name" : "Researchgate", "href" : "https://www.researchgate.net/profile/Javier_Saez-Gallego",}
   	],
 
-  // "refs_label" : {
-  //   "en" : "More",
-  //   "de" : "Weitere" },
+  "refs_label" : {
+    "en" : "More" },
 
   // "formspree" : "cgdaniel@outlook.com",
 
