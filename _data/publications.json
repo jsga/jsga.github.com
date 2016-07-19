@@ -17,23 +17,9 @@
       "thumbnail" : "Inv_pred.jpeg",
       // "flickr"    : "28327694531",
       "downloads" : [
-        { "href"  : "gogle.com",
+        { "href"  : "google.com",
           "desc"  : "DOI"
         }
-        ,
-        { "href"  : "https://drive.google.com/file/d/0B9sUajZRijJAMi1maGtNOV9GTU0/view",
-          "desc"  : "Paper (PDF, 5.7 MiB)"
-        },
-        { "href"  : "https://drive.google.com/file/d/0B9sUajZRijJAeEg2NGtKV3NLWk0/view",
-          "desc"  : "Slides (PDF, 3.0 MiB)"
-        },
-        { "href"  : "https://www.youtube.com/watch?v=t8ibsEl0kAI",
-          "desc"  : "Video (YouTube)",
-          "popup" : "youtube"
-        },
-        { "href"  : "https://code.google.com/p/osghimmel/",
-          "desc"  : "Google Code"
-        } 
       ]
      }
   ]
