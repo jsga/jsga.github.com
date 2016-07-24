@@ -22,9 +22,6 @@
         }
       ]
      },
-     //
-     //
-     //
       { "key"       : "SaezGallego2016-Inv-bidding",
       "bibtex"    : "SaezGallego2016-Inv-bidding.bib",
       "title"     : "A Data-driven Bidding Model for a Cluster of Price-responsive Consumers of Electricity",
