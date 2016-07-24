@@ -11,9 +11,8 @@ languages: [ 'en' ]
 
 google_font_sans_serif:  'Amiko'
 
-# Google services
-google_analytics:
-  
+google_analytics: UA-81251133-1
+
 flickr_user: '144029339@N02'
 flickr_api_key: c4ec3f843c783b1dff9cc477cdc20687
 

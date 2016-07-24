@@ -5,7 +5,7 @@ The complete site's content is based on a json/xml file per section (e.g., ```co
 
 #### Examples
 
-* [Javier Saez](jsaezgallego.com)
+* [Javier Saez](http://jsaezgallego.com)
 
 * [Daniel Limberger](http://www.daniellimberger.de) (adapted)
 
