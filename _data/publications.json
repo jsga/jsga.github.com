@@ -22,8 +22,8 @@
         }
       ]
      },
-      { "key"       : "SaezGallego2016-Inv-bidding",
-      "bibtex"    : "SaezGallego2016-Inv-bidding.bib",
+      { "key"       : "SaezGallego2016-inv-bidding",
+      "bibtex"    : "SaezGallego2016-inv-bidding.bib",
       "title"     : "A Data-driven Bidding Model for a Cluster of Price-responsive Consumers of Electricity",
       "date"      : "2016-02-01",
       "authors"   : [ "Javier Saez Gallego", "Juan M. Morales","Marco Zugno", "Henrik Madsen" ],
