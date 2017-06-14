@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include head.html %}
+{% include head.html %}
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-{% include navbar.html %}
+  {% include navbar.html %}
 
   <body>
     <section class="post-wrapper">
@@ -18,21 +18,21 @@
       {{page.content}}
     </article>
 
-      <ul class="pager blog-pager">
-        {% if page.previous.url %}
-        <li class="previous">
-          <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
-        </li>
-        {% endif %}
-        {% if page.next.url %}
-        <li class="next">
-          <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
-        </li>
-        {% endif %}
-      </ul>
+    <ul class="pager blog-pager">
+      {% if page.previous.url %}
+      <li class="previous">
+        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+      </li>
+      {% endif %}
+      {% if page.next.url %}
+      <li class="next">
+        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+      </li>
+      {% endif %}
+    </ul>
 
-<div id="disqus_thread"></div>
-<script>
+    <div id="disqus_thread"></div>
+    <script>
 
 /**
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -44,10 +44,10 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
 };
 */
 (function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://jsaezgallego-com.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
+  var d = document, s = d.createElement('script');
+  s.src = 'https://jsaezgallego-com.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
@@ -55,5 +55,5 @@ s.setAttribute('data-timestamp', +new Date());
 
 </body>
 
-  {% include footer.html %}
+{% include footer.html %}
 </html>

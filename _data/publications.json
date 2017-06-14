@@ -9,7 +9,7 @@
       "title"     : "Short-term Forecasting of Price-responsive Loads Using Inverse Optimization",
       "date"      : "2016-07-20",
       "authors"   : [ "Javier Saez Gallego", "Juan M. Morales" ],
-      "published" : "Submitted to IEEE Transactions on Smart Grid",
+      "published" : "In IEEE Transactions on Smart Grid",
       
       "caption"   : {
         "en" : "This paper presents a practical solution method for generalized inverse optimization problems, which is then applied to short-term load forecasting. The price-response of the aggregation is modeled by an optimization problem that is characterized by a set of marginal utility curves and minimum and maximum power consumption limits. A case study based on the simulation of the price-response behavior of a pool of buildings equipped with a heat pump is built and analyzed." },
@@ -19,9 +19,15 @@
       "downloads" : [
         { "href"  : "https://www.researchgate.net/publication/305638628_Short-term_Forecasting_of_Price-responsive_Loads_Using_Inverse_Optimization",
           "desc"  : "PDF"
+        },
+        {
+            "href"  : "https://doi.org/10.1109/TSG.2017.2671743",
+           "desc"  : "DOI"
         }
       ]
-     },
+     }
+     ,
+
       { "key"       : "SaezGallego2016-inv-bidding",
       "bibtex"    : "SaezGallego2016-inv-bidding.bib",
       "title"     : "A Data-driven Bidding Model for a Cluster of Price-responsive Consumers of Electricity",
@@ -32,7 +38,6 @@
         "en" : "This paper deals with the market-bidding problem of a cluster of price-responsive consumers of electricity. An inverse optimization method is used for estimating the optimal complex market bid, relative to a pool of price-responsive consumers. Results show that the price-sensitive consumption of the cluster of flexible loads can be largely captured in the form of a complex market bid, so that this could be ultimately used for the cluster to participate in the wholesale electricity market." },
 
       "thumbnail" : "Util_Dec.jpeg",
-      // "flickr"    : "28327694531",
       "downloads" : [
         { "href"  : "https://www.researchgate.net/publication/295832540_A_Data-Driven_Bidding_Model_for_a_Cluster_of_Price-Responsive_Consumers_of_Electricity",
           "desc"  : "PDF"
@@ -42,18 +47,31 @@
            "desc"  : "DOI"
         }
       ]
-     },
+     }
+     ,
+
      { "key"       : "SaezGallego2016-stoch-bidding",
       "bibtex"    : "SaezGallego2016-stoch-bidding.bib",
       "title"     : "Optimal Price-energy Demand Bids for Aggregate Price-responsive Loads",
       "date"      : "2016-07-12",
       "authors"   : [ "Javier Saez Gallego", "Mahdi Kohansal", "Ashkan Sadeghi-Mobarakeh","Juan M. Morales" ],
-      "published" : "Submitted to IEEE Transactions on Power Systems",
+      "published" : "In IEEE Transactions on Power Systems",
       "caption"   : {
         "en" : "In this paper we seek to optimally operate a retailer that, on one side, aggregates a group of price-responsive loads and on the other, submits block-wise demand bids to the day-ahead and real-time markets. Such a retailer/aggregator needs to tackle uncertainty both in customer behavior and wholesale electricity markets. We derive closed-form solutions for the risk-neutral case and also provide a stochastic optimization framework to efficiently analyze the risk-averse case." },
 
       "thumbnail" : "util_scenario_all.jpeg"
+      ,
+      "downloads" : [
+        { "href"  : "https://www.researchgate.net/publication/314218617_Optimal_Price-Energy_Demand_Bids_for_Aggregate_Price-Responsive_Loads",
+          "desc"  : "PDF"
         },
+        {
+            "href"  : "https://doi.org/10.1109/TSG.2017.2677974",
+           "desc"  : "DOI"
+        }
+      ]
+        }
+        ,
         { "key"       : "SaezGallego2016-reserve",
       "bibtex"    : "SaezGallego2016-reserve.bib",
       "title"     : "Determining reserve requirements in DK1 area of Nord Pool using a probabilistic approach",
