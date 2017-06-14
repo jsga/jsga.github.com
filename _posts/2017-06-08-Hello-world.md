@@ -1,10 +1,11 @@
 ---
 layout: post_default
 title:  "Hello world"
-date:   2017-06-08 16:16:01 -0600
+date:   2017-06-14
 categories: misc
-excerpt_separator: <!--more-->
+excerpt_separator: ""
 comments: true
 ---
-Welcome to my blog! In this blog I will<!--more-->
-BLAAAA
+Welcome to my blog! There are still a few things that need to be modified and testes, specially in the syling of the blog posts.
+
+Cheers!
