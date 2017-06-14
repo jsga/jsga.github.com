@@ -1,7 +1,7 @@
 The source files have been taken from [https://travis-ci.org/cgcostume/cgcostume.github.io](https://travis-ci.org/cgcostume/cgcostume.github.io). and modified according to my needs.
 
 Portfolio optimized for researchers and those who strive for a minimal, file-based "content management" (**Datafolio**).
-The complete site's content is based on a json/xml file per section (e.g., ```contact.json```, ```projects.json```, ```publications.json```, ```talks.json```, and ```teaching.json```) as well as the pages ```_config.yml``` information. 
+The complete site's content is based on a json/xml file per section (e.g., ```contact.json```, ```projects.json```, ```publications.json```and ```talks.json```) as well as the pages ```_config.yml``` information. Also, blog posts are supported. Just create a blog post in markdown language and paste them into ```_posts/```.
 
 #### Examples
 
@@ -28,10 +28,6 @@ The complete site's content is based on a json/xml file per section (e.g., ```co
 * responsive navigation (with scrollspy) comprising a top-page link (author or icon), section links (nav-links or dropdown-items), and a language toggle for all used languages
 * support for vCard via file and QR Code
 * basic [Travis CI](https://travis-ci.org/) integration
-
-#### Dependencies
-
-Datafolio uses [Jekyll](http://jekyllrb.com/), [Bootstrap 4](http://v4-alpha.getbootstrap.com/), [Blueimp Gallery](https://github.com/blueimp/Bootstrap-Image-Gallery), can access the [Flickr API](https://www.flickr.com/services/api/) and relies on [jsDelivr](https://www.jsdelivr.com/), [Google Fonts](https://www.google.com/fonts), and [Formspree](http://formspree.io/).
 
 
 #### Building the Website (any platform)
