@@ -6,6 +6,6 @@ categories: misc
 excerpt_separator: ""
 comments: true
 ---
-Welcome to my blog! There are still a few things that need to be modified and testes, specially in the syling of the blog posts.
+Welcome to my blog! There are still a few things that need to be modified and testes, especially the styling of the blog posts.
 
 Cheers!

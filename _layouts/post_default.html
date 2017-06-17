@@ -3,18 +3,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 {% include head.html %}
+
+
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
   {% include navbar.html %}
+    
 
-  <body>
     <section class="post-wrapper">
-      <p class="post-date">{{ page.date }}</p>
+      <p class="post-date">Posted on {{ page.date | date: "%B %-d, %Y" }}</p>
     </section>
-    <h1 class="post-title">{{page.title}}</h1>
-    <article class="post-content">
+    <h1 class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    {{page.title}}
+    </h1>
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       {{page.content}}
     </article>
 
