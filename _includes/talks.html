@@ -6,7 +6,7 @@
 {% for t in talks reversed %}
 <div class="row">
   <div class="col-md-2 col-md-offset-1 text-md-right">
-    {{ t.date | date : "%x" }}
+    {{ t.date | date : "%B %-d, %Y" }}
   </div>
   <div class="col-md-7">
     <p>{{ t.title | escape }}<br><span class="text-muted">{{ t.location | escape }}</span></p>

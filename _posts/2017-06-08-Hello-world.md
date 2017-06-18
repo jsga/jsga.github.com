@@ -6,6 +6,13 @@ categories: misc
 excerpt_separator: ""
 comments: true
 ---
-Welcome to my blog! There are still a few things that need to be modified and testes, especially the styling of the blog posts.
 
-Cheers!
+Hello world, and welcome to my blog!
+
+The main purpose of this blog is to remember the things I've learned during the small projects I take every now and then. Hopefully, this blog will also allow me to share some knowledge with anyone that passes by.
+
+The topics will be varied and will evolve over time.
+
+Welcome, and cheers!
+
+{% include image.html url= "/assets/clouds.jpg " description="Clouds above Monte Perdido" width="500px"%}
