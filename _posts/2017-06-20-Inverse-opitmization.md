@@ -1,12 +1,16 @@
 ---
 layout: post_default
 title:  "Introduction to inverse optimization"
-date:   2017-08-30
+date:   2017-07-16
 categories: tutorial
 excerpt_separator: ""
 comments: true
 ---
 
+
+WORK UNDER PROGRESS!
+
+![alt text](http://cucsa.org.uk/wp-content/uploads/2015/10/Work_In_Progress.png "Work under progress")
 
 
 This post will cover the following points:
@@ -96,9 +100,9 @@ The second equation corresponds to the relaxed strong duality conditions from th
 
 # Other applications of inverse optimization
 
-### Geophysical studies
+#### Geophysical studies
 
-### Prostate cancer treatment
+#### Prostate cancer treatment
 
-### Revealing competitor's prices
+#### Revealing competitor's prices
 
