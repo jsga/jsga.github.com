@@ -14,7 +14,7 @@ This is how I felt when I started my PhD:
 
 &nbsp;
 
-But, anyway, what does Trump have to do with a PhD defence? You are very welcome to find out by yourself by having a look at [the presentation]({{ site.url }}/assets/PhD_defence_Javier_Saez_Gallego.pdf). Tip: there is an extra one around the middle of the presentation, go search for it!
+But, anyway, what does Trump have to do with a PhD defence? You are very welcome to find out by yourself by having a look at [the presentation]({{ site.url }}/assets/PhD_defence_Javier_Saez_Gallego.pdf). Tip: there is an extra meme around the middle of the presentation, go search for it!
 
 
 <center><object data="{{ site.url }}/assets/PhD_defence_Javier_Saez_Gallego.pdf#view=fitBH" type="application/pdf" width="80%" height="400px"> </object></center>
