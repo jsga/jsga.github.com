@@ -27,6 +27,6 @@ shinyFiddle_example()
 
 ***
 
-<iframe src="https://jsaezgallego.shinyapps.io/shinyfiddle/" style="border: none; width: 440px; height: 500px"></iframe>
+<!-- <iframe src="https://jsaezgallego.shinyapps.io/shinyfiddle/" style="border: none; width: 440px; height: 500px"></iframe> -->
 
  
