@@ -1,7 +1,7 @@
 ---
 layout: post_default
 title:  "shinyFiddle R package: how to modify colors in tabs"
-date:   0001-01-01
+date:   2017-11-05
 categories: R, shiny
 excerpt_separator: ""
 comments: true
