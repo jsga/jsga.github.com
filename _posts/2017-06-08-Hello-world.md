@@ -1,7 +1,7 @@
 ---
 layout: post_default
 title:  "Hello world"
-date:   2017-06-14
+date:   2017-06-11
 categories: misc
 excerpt_separator: ""
 comments: true
