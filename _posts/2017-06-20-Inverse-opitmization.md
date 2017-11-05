@@ -37,7 +37,7 @@ $$
 
 where $$\color{orange}\boldsymbol A,\boldsymbol b$$ and $$\color{orange} \boldsymbol c$$ are our known parameters and $$x$$ is our set of unknown decision variables.
 
-There are many methods to find the optimal value, being the [simplex algorithm](https://en.wikipedia.org/wiki/Simplex_algorithm) and the [interior point method](https://en.wikipedia.org/wiki/Interior_point_method) the two most famous ones. Further reading on linear programming is found in [this book](http://web.mit.edu/15.053/www/AMP-Chapter-01.pdf), or in page 23 of [this PhD thesis]https://www.researchgate.net/publication/317645589_Inverse_Optimization_and_Forecasting_Techniques_Applied_to_Decision-making_in_Electricity_Markets).
+There are many methods to find the optimal value, being the [simplex algorithm](https://en.wikipedia.org/wiki/Simplex_algorithm) and the [interior point method](https://en.wikipedia.org/wiki/Interior_point_method) the two most famous ones. Further reading on linear programming is found in [this book](http://web.mit.edu/15.053/www/AMP-Chapter-01.pdf), or in page 23 of [this PhD thesis](https://www.researchgate.net/publication/317645589_Inverse_Optimization_and_Forecasting_Techniques_Applied_to_Decision-making_in_Electricity_Markets).
 
 
 # What is inverse optimization?
