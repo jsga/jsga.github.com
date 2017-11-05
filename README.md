@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/jsga/jsga.github.io.svg?branch=master)](https://travis-ci.org/jsga/jsga.github.io.svg?branch=master)
+<!-- [![Build Status](https://travis-ci.org/jsga/jsga.github.io.svg?branch=master)](https://travis-ci.org/jsga/jsga.github.io.svg?branch=master) -->
 
 
 The source files have been taken from [https://travis-ci.org/cgcostume/cgcostume.github.io](https://travis-ci.org/cgcostume/cgcostume.github.io). and modified according to my needs.

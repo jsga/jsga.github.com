@@ -7,10 +7,10 @@
 {% assign posts = site.data.posts | sort:"date" %}
 {% for post in site.posts %}
 <div class="row">
-	<div class="col-md-2 col-md-offset-1 text-md-right">
+<!-- 	<div class="col-md-2 col-md-offset-1 text-md-right">
 		{{ post.date | date : "%B %-d, %Y" }}
-	</div>
-	<div class="col-md-7">
+	</div> -->
+	<div class="col-md-8 col-md-offset-2">
 		<!-- <p>{{ t.title | escape }}<br><span class="text-muted">{{ t.location | escape }}</span></p> -->
 		<font size="4.7">
 			<a href="{{ post.url }}">{{ post.title }}</a>
