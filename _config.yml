@@ -28,10 +28,7 @@ markdown: kramdown
 kramdown:
    input: GFM
    hard_wrap: false
- future: true
- jailed: false
- theme: jekyll-theme-primer
- gfm_quirks: paragraph_end
+  
 
 # Outputting
 exclude: [
