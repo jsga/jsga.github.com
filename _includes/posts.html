@@ -4,7 +4,7 @@
 </div>
 
 
-{% assign posts = site.data.posts | sort:"date" %}
+{% assign posts = site.data.posts | sort: date %}
 {% for post in site.posts %}
 <div class="row">
 <!-- 	<div class="col-md-2 col-md-offset-1 text-md-right">
