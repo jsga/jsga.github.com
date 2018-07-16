@@ -68,7 +68,7 @@ model.compile(loss='categorical_crossentropy', optimizer='adam')
 The rest of the code is publicly available in [this repository](https://github.com/jsga/DonQuijote_RNN).
 
 
-## Generating sequences of (possibly new) words
+### Generating sequences of (possibly new) words
 
 For generating sequences we do the following:
 
@@ -78,8 +78,7 @@ For generating sequences we do the following:
 3. Sample from that distribution. A small trick is perform so that characters relatively high probability are the only ones selected. If we choose the character with the **highest** probability then we would be sampling the most likely sequence of characters
 4. Append this newly generated character to the sequence. Repeat steps 2-4
 
-In code the above is translated as follow:
-
+The above, translated to Python:
 
 ```python
 
@@ -121,7 +120,7 @@ def generate_words(model,chars,n_vocab, dataX,seq_length):
 
 Running the main file as follows generates new words:
 
-```
+```sh
 python3 DonQuijote.py -w weights-improvement-3L-512-23-1.2375.hdf5
 ```
 
@@ -136,12 +135,12 @@ It is surprisingly good! Some thoughts:
 * Some of the generated words do not exist, even though it is not very often.
 
 
-## Generating sequences of existing words
+### Generating sequences of existing words
 
 A minor modification to the generating algorithm is done such that the newly generated words must exist in the book. If not, that word is rejected. The process is repeated until reasonable words are generated.
 
 
-```python
+```sh
 python3 DonQuijote.py -w weights-improvement-3L-512-23-1.2375.hdf5 -o True
 ```
 
@@ -157,18 +156,18 @@ Training the model on [FloydHub](https://www.floydhub.com/) is really easy and s
 
 1. First you need to create an account
 2. Install their command-line tool and login
-	```
+	```sh
 	pip3 install -U floyd-cli
 	floyd login
 	```
 3. Create a [project](https://www.floydhub.com/projects)
 4. Go to the folder where the code is ans initialize the project:
-	```
+	```sh
 	cd DonQuijote_RNN
 	floyd init DonQuijote_RNN
 	```
 5. Run a script that trains the model and saves the weights on a folder
-	```
+	```sh
 	floyd run --gpu --env tensorflow-1.3 "python3 DonQuijote.py"
 	```
 The model has been trained on a 61 GB GPU for roughly 5 hours. The [weights](https://github.com/jsga/DonQuijote_RNN/blob/master/weights-improvement-3L-512-23-1.2375.hdf5) of the model are updated to the repository.
