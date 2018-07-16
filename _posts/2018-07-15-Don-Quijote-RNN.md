@@ -47,11 +47,11 @@ Note several things:
 ### The model
 The basic block of the model is a Long-Short Term Memory (LSTM)[https://en.wikipedia.org/wiki/Long_short-term_memory] block. LSTM-based models have proved to work really well in practice thanks to their forgetting and updating capabilities. Here it is a quick summary of the components of a LSTM block:
 
-{% include image.html url= "/assets/LSTM.png" description="LSTM block definition. Credits to deeplearning.ai" width="500px"%}
+{% include image.html url= "/assets/LSTM.png" description="LSTM block definition. Credits to deeplearning.ai" width="700px"%}
 
 For this problem we stack 3 LSTM layers with a dropout layer in between. A dropout layer basically randomly "switches off" some neurons at each pass, making the model less prone to over-fitting. In Keras, the model is defined as follows:
 
-```python
+~~~python
 # define the LSTM model
 model = Sequential()
 model.add(LSTM(512, input_shape=(X.shape[1], X.shape[2]),return_sequences=True))
@@ -62,8 +62,7 @@ model.add(LSTM(512))
 model.add(Dropout(0.5))
 model.add(Dense(y.shape[1], activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='adam')
-
-```
+~~~
 
 The rest of the code is publicly available in [this repository](https://github.com/jsga/DonQuijote_RNN).
 

@@ -24,9 +24,7 @@ safe: true
 encoding: utf-8
 
 # Build settings
-markdown: redcarpet2
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+markdown: kramdown
 kramdown:
    input: GFM
    hard_wrap: false
