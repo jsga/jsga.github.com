@@ -24,11 +24,11 @@ safe: true
 encoding: utf-8
 
 # Build settings
-highlighter: rouge
+#highlighter: rouge
 markdown: kramdown
 kramdown:
    input: GFM
-   hard_wrap: false
+#   hard_wrap: false
    syntax_highlighter: rouge
   
 
