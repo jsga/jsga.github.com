@@ -10,16 +10,42 @@ comments: true
 Work in progress! Check out the repository in [Github](https://github.com/jsga/DonQuijote_RNN) for further details while I finish this post :)
 
 
-_"El ingenioso hidalgo don Quijote de la Mancha"_, in English translated as _"The Ingenious Nobleman Sir Quixote of La Mancha"_ or simply _"Don Quixote"_, is one of the classical novels from the Spanish literature written by Cervantes in the 17th century. The style of the original book is rather difficult to read these days as it is written in a form of [old castilian](https://en.wikipedia.org/wiki/Old_Spanish_language), and certainly even more difficult to emulate these days. Can we use deep learning to solve this problem? The answer is YES!
+_"El ingenioso hidalgo don Quijote de la Mancha", in English translated as _"The Ingenious Nobleman Sir Quixote of La Mancha"_ or simply _"Don Quixote"_, is one of the classical novels from the Spanish literature written by Cervantes in the 17th century. The style of the original book is rather difficult to read these days as it is written in a form of [old castilian](https://en.wikipedia.org/wiki/Old_Spanish_language), and certainly even more difficult to emulate. Can we use deep learning to solve this problem? The answer is YES!
 
+The text of the book _El Quijote_ is freely available in [The Project Gutenberg](http://www.gutenberg.org/cache/epub/2000/pg2000.txt). I used chapters 1 to 10, with roughly 110k characters and 20k words.
 
-The data that is feed into the model is the book of _El Quijote_ in plain text. Luckily it is freely available in [The Project Gutenberg](http://www.gutenberg.org/cache/epub/2000/pg2000.txt). I used chapters 1 to 10, with roughly 110k characters and 20k words.
 
 # The model: a recurrent neural network with 3 layers of LSTM
 
-The model takes as input a sequence of characters, say 100 characters. The goal of the model is to predict the next character. The training data (i.e., the next) is sliced so that, at each training sample, X is a column vector of 100 dimensions and Y is a single number.
 
-The basic block of the model is a Long-Short Term Memory (LSTM)[https://en.wikipedia.org/wiki/Long_short-term_memory] block. LSTM-based models have proved to work really well in practice thanks to their forgetting and updating capabilities.
+The model takes as input a sequence of characters, say 100 characters. The goal of the model is to predict the next character. After fitting the model to the training data, we produce 'predictions' of characters sequentially so that new words and sentences are generated.
+
+### Input
+
+The training data (i.e., the next) is sliced so that, at each training sample, X is a column vector of 100 dimensions and Y is a single item.
+
+| X(m) | Y(m) 
+--- | --- 
+| 'primera parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condi' | 'c'
+| 'rimera parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condic' | 'i'
+| 'imera parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condici' | 'o'
+| 'mera parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condicio' | 'n'
+| 'era parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condicion' | ' '
+| 'ra parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condicion ' | 'y'
+| 'a parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condicion y' | ' '
+| ' parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condicion y ' | 'e'
+| 'parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condicion y e' | 'j'
+| ... | ...
+
+Note several things:
+
+* The character at Y(m) is the same as the last character in the X(m+1) training sample
+* Special characters like '\n' and punctuation signs are also included. We expect the model to be able to generate such characters
+* Mathematical models do not understand of characters. Instead, we convert them to numbers before feeding them to the model
+
+
+### The model
+The basic block of the model is a Long-Short Term Memory (LSTM)[https://en.wikipedia.org/wiki/Long_short-term_memory] block. LSTM-based models have proved to work really well in practice thanks to their forgetting and updating capabilities. Here it is a quick summary of the components of a LSTM block:
 
 {% include image.html url= "/assets/LSTM.png" description="LSTM block definition. Credits to deeplearning.ai" width="500px"%}
 
@@ -44,11 +70,62 @@ The rest of the code is publicly available in [this repository](https://github.c
 
 ## Generating sequences of (possibly new) words
 
+For generating sequences we do the following:
+
+1. Select a random seed. Basically pick a location in the book at random and select 100 characters
+	* Remember 1 character corresponds to 1 number and to normalize the inputs to the model
+2. Predict the next character. We obtain an array of probabilities that a character appears next
+3. Sample from that distribution. A small trick is perform so that characters relatively high probability are the only ones selected. If we choose the character with the **highest** probability then we would be sampling the most likely sequence of characters
+4. Append this newly generated character to the sequence. Repeat steps 2-4
+
+In code the above is translated as follow:
+
+
+```python
+
+def generate_words(model,chars,n_vocab, dataX,seq_length):
+
+	# backward dictionary
+	int_to_char = dict((i, c) for i, c in enumerate(chars))
+
+	# pick a random seed
+	start = np.random.randint(0, len(dataX)-1)
+	pattern = dataX[start]
+	print("Seed:")
+	print("\"", ''.join([int_to_char[value] for value in pattern]), "\"")
+
+	# generate characters
+	for i in range(3000):
+		# Select latest sequence
+		pattern_aux = pattern[(len(pattern) - seq_length):len(pattern)]
+		x = np.reshape(pattern_aux, (1, len(pattern_aux), 1))
+		x = x / float(n_vocab)
+		
+		# Predict probability of character appearing next
+		prediction = model.predict(x, verbose=0)
+
+		# Sample
+		index = sample(prediction[0],0.5)
+
+		# add new element
+		pattern.append(index)
+
+	# Translate index to char
+	seq_in = [int_to_char[value] for value in pattern]
+	print('\nGenerated text:\n')
+	print(''.join(seq_in))
+	print('\n\t*** THE END ***')
+
+	return seq_in
+```
+
+Running the main file as follows generates new words:
+
 ```
 python3 DonQuijote.py -w weights-improvement-3L-512-23-1.2375.hdf5
 ```
 
-An example of the output:
+An example of the output (takes around 1 minute to generate):
 
 > con todo eso, se le dejaron de ser su romance v me dejase, porque no le dejare y facilidad de su modo que de la lanza en la caballeriza, por el mesmo camino, y la donde se le habia de haber de los que el campo, porque el estaba la cabeza que le parece a le puerto y de contento, son de la primera entre algunas cosas de la venta, con tanta furia de su primer algunos que a los caballeros andantes a su lanza, y, aunque el no puede le dios te parecian y a tu parte, se dios ser puede los viera en la caballeria en la caballeria en altas partes de la mancha, 
 
