@@ -23,7 +23,7 @@ The model takes as input a sequence of characters, say 100 characters. The goal 
 The training data is sliced so that, for each each training sample, _X_ is a column vector of 100 dimensions and _Y_ is a single item. Here there are the first observations:
 
 
-<center>
+
 | X(m) | Y(m) 
 --- | --- 
 | 'primera parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condi' | 'c'
@@ -36,7 +36,7 @@ The training data is sliced so that, for each each training sample, _X_ is a col
 | ' parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condicion y ' | 'e'
 | 'parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condicion y e' | 'j'
 | ... | ...
-</center>
+
 
 Note several things:
 
