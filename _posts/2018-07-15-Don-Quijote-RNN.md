@@ -7,10 +7,8 @@ excerpt_separator: ""
 comments: true
 ---
 
-Work in progress! Check out the repository in [Github](https://github.com/jsga/DonQuijote_RNN) for further details while I finish this post :)
 
-
-_"El ingenioso hidalgo don Quijote de la Mancha", in English translated as _"The Ingenious Nobleman Sir Quixote of La Mancha"_ or simply _"Don Quixote"_, is one of the classical novels from the Spanish literature written by Cervantes in the 17th century. The style of the original book is rather difficult to read these days as it is written in a form of [old castilian](https://en.wikipedia.org/wiki/Old_Spanish_language), and certainly even more difficult to emulate. Can we use deep learning to solve this problem? The answer is YES!
+_"El ingenioso hidalgo don Quijote de la Mancha", in English translated as _"The Ingenious Nobleman Sir Quixote of La Mancha"_ or simply _"Don Quixote"_, is one of the classical novels from the Spanish literature written by Cervantes in the 17th century. The style of the original book is rather difficult to read these days as it is written in a form of [old castilian](https://en.wikipedia.org/wiki/Old_Spanish_language), and certainly even more difficult to emulate for someone living in the 21st century. Can we use deep learning to solve this problem? The answer is YES!
 
 The text of the book _El Quijote_ is freely available in [The Project Gutenberg](http://www.gutenberg.org/cache/epub/2000/pg2000.txt). I used chapters 1 to 10, with roughly 110k characters and 20k words.
 
@@ -18,12 +16,14 @@ The text of the book _El Quijote_ is freely available in [The Project Gutenberg]
 # The model: a recurrent neural network with 3 layers of LSTM
 
 
-The model takes as input a sequence of characters, say 100 characters. The goal of the model is to predict the next character. After fitting the model to the training data, we produce 'predictions' of characters sequentially so that new words and sentences are generated.
+The model takes as input a sequence of characters, say 100 characters. The goal of the model is to predict the next character. After fitting the model to the training data, we sequentially produce 'predictions' of characters so that new words and full sentences are generated.
 
 ### Input
 
-The training data (i.e., the next) is sliced so that, at each training sample, X is a column vector of 100 dimensions and Y is a single item.
+The training data is sliced so that, for each each training sample, _X_ is a column vector of 100 dimensions and _Y_ is a single item. Here there are the first observations:
 
+
+<center>
 | X(m) | Y(m) 
 --- | --- 
 | 'primera parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condi' | 'c'
@@ -36,20 +36,22 @@ The training data (i.e., the next) is sliced so that, at each training sample, X
 | ' parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condicion y ' | 'e'
 | 'parte del ingenioso hidalgo don quijote de la mancha\ncapitulo primero. que trata de la condicion y e' | 'j'
 | ... | ...
+</center>
 
 Note several things:
 
-* The character at Y(m) is the same as the last character in the X(m+1) training sample
+* The character at _Y(m)_ is the same as the last character in the _X(m+1)_ training sample
 * Special characters like '\n' and punctuation signs are also included. We expect the model to be able to generate such characters
 * Mathematical models do not understand of characters. Instead, we convert them to numbers before feeding them to the model
 
 
 ### The model
+
 The basic block of the model is a Long-Short Term Memory (LSTM)[https://en.wikipedia.org/wiki/Long_short-term_memory] block. LSTM-based models have proved to work really well in practice thanks to their forgetting and updating capabilities. Here it is a quick summary of the components of a LSTM block:
 
 {% include image.html url= "/assets/LSTM.png" description="LSTM block definition. Credits to deeplearning.ai" width="700px"%}
 
-For this problem we stack 3 LSTM layers with a dropout layer in between. A dropout layer basically randomly "switches off" some neurons at each pass, making the model less prone to over-fitting. In Keras, the model is defined as follows:
+For the Don Quixote we stack 3 LSTM layers with a dropout layer in between. A dropout layer basically randomly "switches off" some neurons at each pass of the optimization algorithm, making the model less prone to over-fitting. In Keras (Python), the model is defined as follows:
 
 ~~~python
 # define the LSTM model
@@ -71,10 +73,11 @@ The rest of the code is publicly available in [this repository](https://github.c
 
 For generating sequences we do the following:
 
-1. Select a random seed. Basically pick a location in the book at random and select 100 characters
-	* Remember 1 character corresponds to 1 number and to normalize the inputs to the model
-2. Predict the next character. We obtain an array of probabilities that a character appears next
-3. Sample from that distribution. A small trick is perform so that characters relatively high probability are the only ones selected. If we choose the character with the **highest** probability then we would be sampling the most likely sequence of characters
+1. Select a random seed. Basically pick a location at random in the book and select the 100 next characters
+	* Remember that 1 character corresponds to 1 number
+	* Also remember to normalize the inputs to the model to avoid scaling issues
+2. Make a prediction. We obtain an array of probabilities of each character appearing next
+3. Sample from that distribution. A small trick is done so that characters relatively high probability are most likely selected. If we choose the character with the **highest** probability then we would be sampling the most likely sequence of characters!
 4. Append this newly generated character to the sequence. Repeat steps 2-4
 
 The above, translated to Python:
@@ -125,13 +128,15 @@ python3 DonQuijote.py -w weights-improvement-3L-512-23-1.2375.hdf5
 
 An example of the output (takes around 1 minute to generate):
 
-> con todo eso, se le dejaron de ser su romance v me dejase, porque no le dejare y facilidad de su modo que de la lanza en la caballeriza, por el mesmo camino, y la donde se le habia de haber de los que el campo, porque el estaba la cabeza que le parece a le puerto y de contento, son de la primera entre algunas cosas de la venta, con tanta furia de su primer algunos que a los caballeros andantes a su lanza, y, aunque el no puede le dios te parecian y a tu parte, se dios ser puede los viera en la caballeria en la caballeria en altas partes de la mancha, 
+```
+con todo eso, se le dejaron de ser su romance v me dejase, porque no le dejare y facilidad de su modo que de la lanza en la caballeriza, por el mesmo camino, y la donde se le habia de haber de los que el campo, porque el estaba la cabeza que le parece a le puerto y de contento, son de la primera entre algunas cosas de la venta, con tanta furia de su primer algunos que a los caballeros andantes a su lanza, y, aunque el no puede le dios te parecian y a tu parte, se dios ser puede los viera en la caballeria en la caballeria en altas partes de la mancha, 
+```
 
 It is surprisingly good! Some thoughts:
 
 * The style of the book is definitely really similar to Cervantes style. Some sentences are really funny.
 * The syntax, however, is not correct: _(...) se le dejaron de ser su romance (...)_ is wrong even though the words do exist
-* Some of the generated words do not exist, even though it is not very often.
+* Some of the generated words do not exist, even though it is not very often. This indicates the model is working pretty well.
 
 
 ### Generating sequences of existing words
@@ -143,14 +148,16 @@ A minor modification to the generating algorithm is done such that the newly gen
 python3 DonQuijote.py -w weights-improvement-3L-512-23-1.2375.hdf5 -o True
 ```
 
-> al cual le parecieron don quijote de la mancha, en cuando le daba a le senor tio en el corral, y tio que andaba muy acerto los dos viejos, y, al caso de van manera con el de tu escudero. don quijote y mas venta a su asno, con toda su amo pasa dios de la caballeria y de al que habia leido, no habia de ser tu escudero: la suelo del camino de la venta, de que san caballo de los que le habia dejado; a este libro es este es el mismo coche, como te ve don mucho deseos de los que el caballero le hallaba; y al corral con la cabeza que aquel sabio en la gente de la lanza y tan las demas y camas de tu escudero, 
+```
+ al cual le parecieron don quijote de la mancha, en cuando le daba a le senor tio en el corral, y tio que andaba muy acerto los dos viejos, y, al caso de van manera con el de tu escudero. don quijote y mas venta a su asno, con toda su amo pasa dios de la caballeria y de al que habia leido, no habia de ser tu escudero: la suelo del camino de la venta, de que san caballo de los que le habia dejado; a este libro es este es el mismo coche, como te ve don mucho deseos de los que el caballero le hallaba; y al corral con la cabeza que aquel sabio en la gente de la lanza y tan las demas y camas de tu escudero, 
+ ```
 
-The syntax of all the words is correct now
+With this modification, the character-generating model can now generate words with a correct syntax.
 
 
 # Training on FloydHub
 
-Training the model on [FloydHub](https://www.floydhub.com/) is really easy and straightforward. Here it is a quick quide on how you can do the same with only a few lines of code
+[FloydHub](https://www.floydhub.com/) is a cloud-based platform for training and deploying deep learning models. It is really easy and straightforward to use. Here it is a quick guide on how you can train your models with only a few lines of code:
 
 
 1. First you need to create an account
