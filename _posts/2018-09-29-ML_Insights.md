@@ -1,7 +1,7 @@
 ---
 layout: post_default
 title:  "Learning insights from neural networks: a summary with code"
-date:   2018-09-29
+date:   2018-09-28
 categories: Python
 excerpt_separator: ""
 comments: true
@@ -343,146 +343,9 @@ eli5.show_weights(perm, feature_names = X_train.columns.tolist())
 ```
 
 
+<!-- ![png]({{ site.url }}/assets/insights_post/output_permutation_imp.png) -->
 
-
-
-    <style>
-    table.eli5-weights tr:hover {
-        filter: brightness(85%);
-    }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <table class="eli5-weights eli5-feature-importances" style="border-collapse: collapse; border: none; margin-top: 0em; table-layout: auto;">
-    <thead>
-    <tr style="border: none;">
-        <th style="padding: 0 1em 0 0.5em; text-align: right; border: none;">Weight</th>
-        <th style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">Feature</th>
-    </tr>
-    </thead>
-    <tbody>
-
-        <tr style="background-color: hsl(120, 100.00%, 80.00%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                2297.2632
-
-                    &plusmn; 7.2732
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                NOx
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 93.41%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                470.6033
-
-                    &plusmn; 3.9636
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                NO_2
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 97.40%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                124.4992
-
-                    &plusmn; 4.9419
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                PM10
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 99.42%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                14.6793
-
-                    &plusmn; 0.7235
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                CO
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 99.73%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                5.0095
-
-                    &plusmn; 0.7353
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                SO_2
-            </td>
-        </tr>
-
-
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{% include image.html url= "/assets/insights_post/output_permutation_imp.png " description="Permutation Importance" width="400px"%}
 
 # Partial dependence plots
 Permutation importance allowed us to find out which variable are most important in terms of predicting the Ozone levels. The next question comes naturally: _What is the effect of such variables in the Ozone concentrations?_ In the world of linear models this question is answered by looking at the coefficients. In the black-box world, we look at the [partial dependence](https://towardsdatascience.com/introducing-pdpbox-2aa820afd312) plots (PDP).
