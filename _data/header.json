@@ -1,15 +1,15 @@
-{ 
+{
   "heading" : {
   	"en" : "Hi, I'm Javier Sáez Gallego,"
   	 },
 
-  "lead" : { 
+  "lead" : {
   	"en" : "a Spanish data scientist and optimization specialist." },
 
   "about" : {
   	"en" : "I would describe myself as a very motivated person, towards both my job and my life as a whole. I am very passionate about transforming numbers into knowledge and using them for optimal decisions, while always thinking out of the box. On a personal level, I consider myself to be a very positive person, with an easy smile and full of energy." },
 
-  "keywords" : {"en" : "In a few keywords: machine learning, forecasting and scenario generation, stochastic and robust optimization, integer and large scale optimization models, R, Python, Matlab, Apache Spark, GAMS, CPLEX, SQL, git.
+  "keywords" : {"en" : "In a few keywords: machine learning, forecasting and scenario generation, stochastic and integer large scale optimization models, R, Python, Matlab, GAMS, CPLEX, SQL, git.
 "},
 
   "picture" : "Javi.JPG"

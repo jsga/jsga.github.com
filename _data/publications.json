@@ -2,15 +2,56 @@
   "heading" : {
     "en" : "Publications"},
 
-  "publications" : [ 
+  "publications" : [
 
+    { "key"       : "Dachert2019",
+      "bibtex"    : "Dachert2019.bib",
+      "title"     : "A bicriteria perspective on L-Penalty Approaches - A corrigendum to Siddiqui and Gabriel's L-Penalty Approach for Solving MPECs",
+      "date"      : "2019-01-5",
+      "authors"   : [ "Kerstin Dächert","Sauleh Siddiqui","Javier Saez-Gallego","Steven Gabriel","Juan Miguel Morales" ],
+      "published" : "Networks and Spatial Economics",
+
+      "caption"   : {
+        "en" : "This paper presents a corrigendum to Theorems 2 and 3 in Siddiqui S, Gabriel S (2013). In brief, we revise the claim that their L-penalty approach yields a solution satisfying complementarity for any positive value of L, in general. We also elaborate further assumptions under which the L-penalty approach yields a solution satisfying complementarity." },
+
+      "thumbnail" : "L_penalty.png",
+      "downloads" : [
+        { "href"  : "https://export.arxiv.org/pdf/1807.09340",
+          "desc"  : "PDF"
+        }
+      ]
+    },
+
+    { "key"       : "Luke2018",
+      "bibtex"    : "Luke2018.bib",
+      "title"     : "Power curve measurement uncertainty – follow up comparative exercise for IEA Task 32",
+      "date"      : "2018-06-20",
+      "authors"   : [ "Luke Simmons", "K. Franke", "Christos Tsouknidas", "Javier Saez-Gallego", "E. Weyer","Paula Gómez" ],
+      "published" : "TORQUE",
+
+      "caption"   : {
+        "en" : "A comparative exercise for estimating the uncertainty associated with new methods for  power  performance  measurements  was  coordinated  by  the  International  Energy  Agency  (IEA)  Wind  Task  32. The exercise showed significant variability among participants reflecting difficulty with the interpretation and application of the informative  guidance." },
+
+      "thumbnail" : "IEA_task32.png",
+      "downloads" : [
+        { "href"  : "https://www.researchgate.net/publication/325838798_Power_curve_measurement_uncertainty_-_follow_up_comparative_exercise_for_IEA_Task_32",
+          "desc"  : "PDF"
+        },
+        {
+            "href"  : "https://www.doi.org/10.1088/1742-6596/1037/5/052028",
+           "desc"  : "DOI"
+        }
+      ]
+     }
+
+     ,
     { "key"       : "SaezGallego2016-forecast",
       "bibtex"    : "SaezGallego2016-forecast.bib",
       "title"     : "Short-term Forecasting of Price-responsive Loads Using Inverse Optimization",
       "date"      : "2016-07-20",
       "authors"   : [ "Javier Saez Gallego", "Juan M. Morales" ],
       "published" : "In IEEE Transactions on Smart Grid",
-      
+
       "caption"   : {
         "en" : "This paper presents a practical solution method for generalized inverse optimization problems, which is then applied to short-term load forecasting. The price-response of the aggregation is modeled by an optimization problem that is characterized by a set of marginal utility curves and minimum and maximum power consumption limits. A case study based on the simulation of the price-response behavior of a pool of buildings equipped with a heat pump is built and analyzed." },
 
@@ -104,7 +145,7 @@
     //   "date"      : "2013-05-01",
     //   "authors"   : [ "Daniel Limberger", "Benjamin Wasty", "Jonas Trümper", "Jürgen Döllner" ],
     //   "published" : "In Proceedings of the International Web3D Conference",
-      
+
     //   "caption"   : {
     //     "en" : "Software maps&mdash;linking 2.5D treemaps, software system structure, and performance indicators&mdash;are commonly used to support informed decision making in software-engineering processes.
     //             In this paper a web-based rendering system for software maps that achieves both fast client-side page load time and interactive frame rates even with large software maps is presented.
@@ -135,16 +176,16 @@
     //   "date"      : "2014-08-01",
     //   "authors"   : [ "Daniel Limberger", "Jürgen Döllner" ],
     //   "published" : "In Expressive Poster Session",
-      
+
     //   "caption"   : {
     //     "en" : "This work presents a photo-editing method that enables per-pixel parameter manipulation of image filtering by means of interactive painting.
-    //             Predefined or custom image filters are exposed to the user, as a parametrizable composition of image operations. 
-    //             Brushes, as sequences of actions mapping user inputs (in terms of brush shape, flow, pressure, etc.) to arbitrary functions or convolution operators, are used to draw within the parameter space. 
+    //             Predefined or custom image filters are exposed to the user, as a parametrizable composition of image operations.
+    //             Brushes, as sequences of actions mapping user inputs (in terms of brush shape, flow, pressure, etc.) to arbitrary functions or convolution operators, are used to draw within the parameter space.
     //             It demonstrates how interactive painting can be used to, e.g., locally tweak parametrization and, furthermore, provides a blueprint for an collaborative photo-editing platform.",
     //     "de" : "Diese Arbeit stellt eine Methode zur Bildbearbeitung vor, welche per-pixel Manipulation von Filterparametern ermöglicht.
     //             Vordefinierte oder benutzerdefinierte Bildfilter werden als Komposition parametrisierter Bildoperationen freigelegt.
     //             So können Interaktionen mittels Pinselmethapher (Pinselform, Verlauf, Druck, etc.) als Abfolge von Operationen (z.B. Faltungen) im Parameterraum genutzt werden.
-    //             Es wird gezeigt wie durch Malen interaktiv lokale Korrekturen der Parameterisierungen erfolgen können. 
+    //             Es wird gezeigt wie durch Malen interaktiv lokale Korrekturen der Parameterisierungen erfolgen können.
     //             Zudem kann die Arbeit als Blaupause für eine offene, kollaborative Bildverarbebitungs-Platform dienen." },
 
     //   "thumbnail" : "2014-expressive-painting-per-pixel-parametrization.jpg",
@@ -163,11 +204,11 @@
     //   "lead_note" : "<a href='http://expressive.graphics/2015'>Best Paper Award</a>",
 
     //   "caption"   : {
-    //     "en" : "This paper presents an approach for transforming images into an oil paint look. 
-    //             A color quantization scheme is proposed that performs feature-aware recolorization using the dominant colors of the input image. 
-    //             In addition, an approach for real-time computation of paint textures is presented that builds on the smoothed structure adapted to the main feature contours of the quantized image. 
+    //     "en" : "This paper presents an approach for transforming images into an oil paint look.
+    //             A color quantization scheme is proposed that performs feature-aware recolorization using the dominant colors of the input image.
+    //             In addition, an approach for real-time computation of paint textures is presented that builds on the smoothed structure adapted to the main feature contours of the quantized image.
     //             The stylization technique leads to homogeneous outputs in the color domain and enables creative control over the visual output, such as color adjustments and per-pixel parametrizations by means of interactive painting.",
-    //     "de" : "In dieser Arbeit wird eine Methode zur Umwandlung eines Bildes in ein Ölgemälde vorgestellt. 
+    //     "de" : "In dieser Arbeit wird eine Methode zur Umwandlung eines Bildes in ein Ölgemälde vorgestellt.
     //             Dazu wird ein Schema zur Farbquantisierung vorgeschlagen, welches eine Feature-erhaltende Neueinfärbung mittels dominanter Farben des Eingabebildes erlaubt.
     //             Zudem wird ein Ansatz zur echtzeit-fähigen Berechnung einer Farb- und Lackstruktur auf Basis von an Featurekonturen ausgerichteten und geglätteter Strukturen diskutiert.
     //             Die Methode liefert farblich homogene Ergebnisse und ermöglicht gestalterische Kontrolle über die Ausgabe, z.B. Farbanpassungen oder Per-Pixel Parameterisierung mittels interkativem Malen." },
@@ -193,7 +234,7 @@
     //   "date"      : "2015-09-16",
     //   "authors"   : [ "Hannes Würfel", "Matthias Trapp", "Daniel Limberger", "Jürgen Döllner" ],
     //   "published" : "In Proceedings of Computer Graphics and Visual Computing",
-      
+
     //   "caption"   : {
     //     "en" : "This work explores the suitability of rendering natural phenomena in Software maps for effective communication of changes as well as trends.
     //             Therefore, Unreal Engine 4 is prototypically used to render Software maps and natural phenomena, such as fire, clouds, smoke, rain, rust, or shininess in real-time.
@@ -203,7 +244,7 @@
     //             Die Trenddaten werden aus den zugrundeliegenden Softwaremetriken abgeleitet und auf die zusätzlichen visuellen Variablen abgebildet." },
 
     //   "thumbnail" : "2015-natural-metaphors.jpg",
-    //   "flickr"    : "72157663043933623",     
+    //   "flickr"    : "72157663043933623",
     //   "downloads" : [
     //     { "href"  : "http://dx.doi.org/10.2312/cgvc.20151246",
     //       "desc"  : "DOI"
@@ -219,14 +260,14 @@
     //   "authors"   : [ "Amir Semmo", "Daniel Limberger", "Jan Eric Kyprianidis", "Jürgen Döllner" ],
     //   "published" : "Computers & Graphics",
     //   "lead_note" : "<a href='http://vcg.isti.cnr.it/cgf/winner.php?year=2016'>CGF Cover Contest 2016 (Runner-up)</a>",
-      
+
     //   "caption"   : {
     //     "en" : "An interactive system for transforming images into an oil paint look is presented:
-    //             First, dominant colors from an input image are derived for feature-aware recolorization and quantization to conform with a global color palette. 
+    //             First, dominant colors from an input image are derived for feature-aware recolorization and quantization to conform with a global color palette.
     //             Afterwards, it employs non-linear filtering based on the smoothed structure adapted to the main feature contours of the quantized image to synthesize a paint texture in real-time.
     //             Furthermore, a generalized brush-based painting interface is introduced that operates within parameter spaces to locally adjust the level of abstraction of the filtering effects.",
     //     "de" : "An interactive system for transforming images into an oil paint look is presented:
-    //             First, dominant colors from an input image are derived for feature-aware recolorization and quantization to conform with a global color palette. 
+    //             First, dominant colors from an input image are derived for feature-aware recolorization and quantization to conform with a global color palette.
     //             Afterwards, it employs non-linear filtering based on the smoothed structure adapted to the main feature contours of the quantized image to synthesize a paint texture in real-time.
     //             Furthermore, a generalized brush-based painting interface is introduced that operates within parameter spaces to locally adjust the level of abstraction of the filtering effects." },
 
@@ -245,11 +286,10 @@
     //   "date"      : "2016-04-08",
     //   "authors"   : [ "Daniel Limberger", "Karsten Tausche", "Johannes Linke", "Jürgen Döllner" ],
     //   "published" : "GPU Pro 7: Advanced Rendering Techniques",
-      
+
     //   "caption"   : {
     //     "en" : "This article will be release in April 2016.<br>More details and supplemental material will be provided soon...",
     //     "de" : "Dieser Artikel erscheint im April.<br>Weitere Details und ergänzende Materialien folgen..." },
 
     //   "thumbnail" : "2016-multi-frame-sampling.jpg",
     // }
-
