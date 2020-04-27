@@ -1,16 +1,17 @@
 {
-  "heading" : {
-  	"en" : "Hi, I'm Javier Sáez Gallego,"
-  	 },
-
-  "lead" : {
-  	"en" : "a Spanish data scientist and optimization specialist." },
-
-  "about" : {
-  	"en" : "I would describe myself as a very motivated person, towards both my job and my life as a whole. I am very passionate about transforming numbers into knowledge and using them for optimal decisions, while always thinking out of the box. On a personal level, I consider myself to be a very positive person, with an easy smile and full of energy." },
-
-  "keywords" : {"en" : "In a few keywords: machine learning, forecasting and scenario generation, stochastic and integer large scale optimization models, R, Python, Matlab, GAMS, CPLEX, SQL, git.
-"},
-
-  "picture" : "Javi.JPG"
-}
+  "heading": {
+    "en": "Hi, I'm Javier Sáez Gallego,"
+  },
+  "lead": {
+    "en": "a passionate Data Scientist who builds data-driven software   products and helps organizations transform numbers into optimal decisions."
+  },
+  "about1": {
+    "en": "I have analyzed highly dimensional datasets and built machine learning models, from the research stage to the implemented deployed solution. With a multidisciplinary background, I have worked in academia and industry, focusing on various topics as smart grids, wind production, risk analysis, optimal scheduling, predictive maintenance, and computer vision."
+  },
+  "about2": {
+    "en": "I love the coalition between machine learning modeling and operations research, sophisticated mathematical formulations and simple robust approaches, black-box modeling and interpretability, design and deployment. Thriving in dynamic environments, I enjoy dissecting complex business problems and learning new tools. I am careful, very organized, meticulous about planning always focusing on delivering the right solution. "
+  },
+  "keywords": {
+    "en": "Preferred tools: Python, Numpy, Pandas, sci-kit learn, Tensorflow, Rasterio, Gdal, Dash, R, Shiny, CPLEX, SQL, Docker, AWS, Linux, git."},
+  "picture": "Javi.png"
+  }
